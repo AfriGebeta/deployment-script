@@ -1,0 +1,15 @@
+    1  curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.33.0/install.sh | bash
+    2  sudo apt update
+    3  sudo apt install git
+    4  sudo apt install python3-pip -y
+    5  sudo apt install nginx
+    6  sudo ufw enable
+    7  sudo ufw allow 22
+    8  sudo ufw status
+    9  sudo ufw allow 'Nginx FULL'
+    10 systemctl status nginx
+    11 sudo vim /etc/nginx/sites-available/example1.example.com
+    12 enter the values inside domain_content.txt
+    13 sudo apt install snapd
+    14 sudo snap install --classic certbot
+    15 sudo certbot --nginx
