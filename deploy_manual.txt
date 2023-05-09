@@ -12,4 +12,4 @@
     12 enter the values inside domain_content.txt
     13 sudo apt install snapd
     14 sudo snap install --classic certbot
-    15 sudo certbot --nginx
+    15 sudo certbot certonly --nginx -d sms.gebeta.app 
