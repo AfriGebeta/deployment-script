@@ -8,8 +8,12 @@
     8  sudo ufw status
     9  sudo ufw allow 'Nginx FULL'
     10 systemctl status nginx
-    11 sudo vim /etc/nginx/sites-available/example1.example.com
-    12 enter the values inside domain_content.txt
-    13 sudo apt install snapd
-    14 sudo snap install --classic certbot
-    15 sudo certbot certonly --nginx -d sms.gebeta.app 
+    11 sudo vim /etc/nginx/nginx.conf and uncoment server_names_hash_bucket_size 64;
+    12 sudo vim /etc/nginx/sites-available/example1.example.com
+    13 enter the values inside domain_content.txt
+    14 sudo apt install snapd
+    15 sudo snap install --classic certbot
+    16 sudo certbot certonly --nginx -d example1.example.com
+    17 sudo ln -s /etc/nginx/sites-available/example1.example.com /etc/nginx/sites-enabled/
+    18 sudo rm /etc/nginx/sites-enabled/default
+    19 sudo nginx -t
